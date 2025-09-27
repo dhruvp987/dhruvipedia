@@ -1,8 +1,15 @@
 ---
 import Start from '../components/Start.astro';
 import Layout from '../layouts/Layout.astro';
+
+import '../styles/global.css';
+import '../styles/index.css';
 ---
 
 <Layout>
-	<Start />
+	<div class="index-container">
+		<h1 class="tiny5-regular">dhruvipedia</h1>
+		<p class="playfair-display-regular">The world's best source of random wisdom.</p>
+		<a class="playfair-display-regular" href="/articles/suntzu">Sun Tzu</a>
+	</div>
 </Layout>

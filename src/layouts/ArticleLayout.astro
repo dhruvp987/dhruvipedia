@@ -1,4 +1,7 @@
 ---
+import '../styles/global.css';
+import '../styles/article.css';
+
 const { frontmatter } = Astro.props;
 ---
 
@@ -9,11 +12,19 @@ const { frontmatter } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{frontmatter.title} - Dhruvipedia</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tiny5&family=Zilla+Slab:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<title>{frontmatter.title} - dhruvipedia</title>
 	</head>
 	<body>
-		<h1>{frontmatter.title}</h1>
-		<slot />
+		<div class="header">
+			<a class="header-link" href="/"><h1>dhruvipedia</h1></a>
+		</div>
+		<div class="article-container">
+			<h2>{frontmatter.title}</h2>
+			<slot />
+		</div>
 	</body>
 </html>
 
