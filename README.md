@@ -1,2 +1,2 @@
 # dhruvipedia
-The best source of wisdom in the world
+The world's best source of random wisdom.
